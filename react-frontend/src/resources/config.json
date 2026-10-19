@@ -1,0 +1,850 @@
+{
+  "projectName": "taskManagementApp",
+  "description": "",
+  "auth": "jwt",
+  "database": {
+    "_id": "6718ba9bc686b63c57a218e6",
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB",
+    "appName": "mongodb-database",
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "configFileRelativePath": null,
+    "disabled": false,
+    "createdAt": "2024-10-23T08:58:03.145Z",
+    "updatedAt": "2024-10-23T08:58:03.145Z"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js",
+      "versions": []
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript",
+      "versions": []
+    }
+  ],
+  "appearance": {
+    "theme": "lara-light-teal",
+    "services": {
+      "tasks": {
+        "theme": "lara-light-teal",
+        "fontFamily": "Inter, sans-serif",
+        "fontSize": "14px",
+        "tableColWidth": 10,
+        "dialogFieldsPerRow": 3,
+        "appMenu": "My app",
+        "appIcon": "Home",
+        "menu": "",
+        "icon": "GenAI",
+        "menuIcon": "Home",
+        "menus": [
+          {
+            "label": "Menu 1",
+            "icon": "Admin"
+          }
+        ]
+      },
+      "collaborators": {
+        "theme": "lara-light-teal",
+        "fontFamily": "Inter, sans-serif",
+        "fontSize": "14px",
+        "tableColWidth": 10,
+        "dialogFieldsPerRow": 3,
+        "appMenu": "My app",
+        "appIcon": "Home",
+        "menu": "Menu 1",
+        "icon": "Email",
+        "menuIcon": "Admin",
+        "menus": [
+          {
+            "label": "Menu 1",
+            "icon": "Admin"
+          }
+        ]
+      },
+      "progressNotes": {
+        "theme": "lara-light-teal",
+        "fontFamily": "Inter, sans-serif",
+        "fontSize": "14px",
+        "tableColWidth": 10,
+        "dialogFieldsPerRow": 3,
+        "appMenu": "My app",
+        "appIcon": "Home",
+        "menu": "",
+        "icon": "DepartmentAdmin",
+        "menuIcon": "Home",
+        "menus": [
+          {
+            "label": "Menu 1",
+            "icon": "Admin"
+          }
+        ]
+      }
+    }
+  },
+  "services": [
+    {
+      "serviceName": "tasks",
+      "databaseName": "tasks",
+      "displayName": "Tasks",
+      "description": "",
+      "icon": "pi pi-box",
+      "timestamp": true,
+      "createdBy": true,
+      "updatedBy": true,
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "title",
+          "type": "String",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Title",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "8",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ff9a"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "max": 150,
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "description",
+          "type": "String",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Description",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "8",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ff9b"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "max": 150,
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "priority",
+          "type": "Number",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Priority",
+          "faker": {
+            "module": "finance",
+            "subModule": "amount",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ff9c"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "max": 10000000,
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "dueDate",
+          "type": "Date",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p_date",
+          "label": "Due Date",
+          "faker": {
+            "module": "date",
+            "subModule": "soon",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ff9d"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "min": null,
+          "max": null,
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "status",
+          "type": "Boolean",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": false,
+          "required": false,
+          "component": "p_boolean",
+          "label": "Status",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ff9e"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": true,
+      "ai": true,
+      "mobile": true,
+      "warehouse": true,
+      "serviceHooks": {
+        "mustLoginAllBefore": true,
+        "mustLoginCreatedBefore": false,
+        "mustLoginGetBefore": false,
+        "mustLoginFindBefore": false,
+        "mustLoginUpdateBefore": false,
+        "mustLoginPatchBefore": false,
+        "mustLoginRemoveBefore": false,
+        "mustLoginAllAfter": false,
+        "mustLoginFindAfter": false,
+        "mustLoginGetAfter": false,
+        "mustLoginCreatedAfter": false,
+        "mustLoginUpdateAfter": false,
+        "mustLoginPatchAfter": false,
+        "mustLoginRemoveAfter": false,
+        "mustLoginAllError": false,
+        "mustLoginFindError": false,
+        "mustLoginGetError": false,
+        "mustLoginCreatedError": false,
+        "mustLoginUpdateError": false,
+        "mustLoginPatchError": false,
+        "mustLoginRemoveError": false,
+        "_id": "6ab3540e567b7955de05ff9f"
+      },
+      "ui": {
+        "theme": "lara-light-teal",
+        "fontFamily": "Inter, sans-serif",
+        "fontSize": "14px",
+        "tableColWidth": 10,
+        "dialogFieldsPerRow": 3,
+        "appMenu": "My app",
+        "appIcon": "Home",
+        "menu": "",
+        "icon": "GenAI",
+        "menuIcon": "Home",
+        "menus": [
+          {
+            "label": "Menu 1",
+            "icon": "Admin"
+          }
+        ]
+      }
+    },
+    {
+      "serviceName": "collaborators",
+      "databaseName": "collaborators",
+      "displayName": "Collaborators",
+      "description": "",
+      "icon": "pi pi-box",
+      "timestamp": true,
+      "createdBy": true,
+      "updatedBy": true,
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "user",
+          "type": "String",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "User",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "8",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ffa1"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "max": 150,
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "task",
+          "type": "ObjectId",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "Task",
+          "faker": {
+            "module": "database",
+            "subModule": "mongodbObjectId",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ffa2"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "tasks",
+            "refDatabaseName": "tasks",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "title"
+            ]
+          }
+        },
+        {
+          "fieldName": "status",
+          "type": "Boolean",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": false,
+          "required": false,
+          "component": "p_boolean",
+          "label": "Status",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ffa3"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": true,
+      "ai": true,
+      "mobile": true,
+      "warehouse": true,
+      "serviceHooks": {
+        "mustLoginAllBefore": true,
+        "mustLoginCreatedBefore": false,
+        "mustLoginGetBefore": false,
+        "mustLoginFindBefore": false,
+        "mustLoginUpdateBefore": false,
+        "mustLoginPatchBefore": false,
+        "mustLoginRemoveBefore": false,
+        "mustLoginAllAfter": false,
+        "mustLoginFindAfter": false,
+        "mustLoginGetAfter": false,
+        "mustLoginCreatedAfter": false,
+        "mustLoginUpdateAfter": false,
+        "mustLoginPatchAfter": false,
+        "mustLoginRemoveAfter": false,
+        "mustLoginAllError": false,
+        "mustLoginFindError": false,
+        "mustLoginGetError": false,
+        "mustLoginCreatedError": false,
+        "mustLoginUpdateError": false,
+        "mustLoginPatchError": false,
+        "mustLoginRemoveError": false,
+        "_id": "6ab3540e567b7955de05ffa4"
+      },
+      "ui": {
+        "theme": "lara-light-teal",
+        "fontFamily": "Inter, sans-serif",
+        "fontSize": "14px",
+        "tableColWidth": 10,
+        "dialogFieldsPerRow": 3,
+        "appMenu": "My app",
+        "appIcon": "Home",
+        "menu": "Menu 1",
+        "icon": "Email",
+        "menuIcon": "Admin",
+        "menus": [
+          {
+            "label": "Menu 1",
+            "icon": "Admin"
+          }
+        ]
+      }
+    },
+    {
+      "serviceName": "progressNotes",
+      "databaseName": "progress_notes",
+      "displayName": "Progress Notes",
+      "description": "",
+      "icon": "pi pi-box",
+      "timestamp": true,
+      "createdBy": true,
+      "updatedBy": true,
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "task",
+          "type": "ObjectId",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": false,
+          "required": false,
+          "component": "dropdown",
+          "label": "Task",
+          "faker": {
+            "module": "database",
+            "subModule": "mongodbObjectId",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ffa6"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "refServiceName": "tasks",
+            "refDatabaseName": "tasks",
+            "relationshipType": "one-to-one",
+            "identifierFieldName": [
+              "title"
+            ]
+          }
+        },
+        {
+          "fieldName": "note",
+          "type": "String",
+          "enumValues": [],
+          "setValues": [],
+          "jsonSchema": null,
+          "colWidth": 6,
+          "protected": false,
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "deletable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Note",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "8",
+            "skip": false,
+            "_id": "6ab3540e567b7955de05ffa7"
+          },
+          "isMultiple": false,
+          "isManyToMany": false,
+          "max": 150,
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": true,
+          "warehousing": true,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": true,
+      "ai": true,
+      "mobile": true,
+      "warehouse": true,
+      "serviceHooks": {
+        "mustLoginAllBefore": true,
+        "mustLoginCreatedBefore": false,
+        "mustLoginGetBefore": false,
+        "mustLoginFindBefore": false,
+        "mustLoginUpdateBefore": false,
+        "mustLoginPatchBefore": false,
+        "mustLoginRemoveBefore": false,
+        "mustLoginAllAfter": false,
+        "mustLoginFindAfter": false,
+        "mustLoginGetAfter": false,
+        "mustLoginCreatedAfter": false,
+        "mustLoginUpdateAfter": false,
+        "mustLoginPatchAfter": false,
+        "mustLoginRemoveAfter": false,
+        "mustLoginAllError": false,
+        "mustLoginFindError": false,
+        "mustLoginGetError": false,
+        "mustLoginCreatedError": false,
+        "mustLoginUpdateError": false,
+        "mustLoginPatchError": false,
+        "mustLoginRemoveError": false,
+        "_id": "6ab3540e567b7955de05ffa8"
+      },
+      "ui": {
+        "theme": "lara-light-teal",
+        "fontFamily": "Inter, sans-serif",
+        "fontSize": "14px",
+        "tableColWidth": 10,
+        "dialogFieldsPerRow": 3,
+        "appMenu": "My app",
+        "appIcon": "Home",
+        "menu": "",
+        "icon": "DepartmentAdmin",
+        "menuIcon": "Home",
+        "menus": [
+          {
+            "label": "Menu 1",
+            "icon": "Admin"
+          }
+        ]
+      }
+    }
+  ]
+}
